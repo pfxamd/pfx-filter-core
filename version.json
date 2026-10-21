@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "kind": "core",
+  "product": "PFx Filter Core",
+  "channel": "Development",
+  "version": "0.0.0-dev.0",
+  "label": "Development 0.0.0-dev.0",
+  "commit": "2ca3c924f715896c7dfcd43651f80d0d1214bfed",
+  "sourceDate": "2026-10-21T22:00:55+01:00"
+}
