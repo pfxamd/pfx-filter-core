@@ -1,0 +1,35 @@
+name: Filter Core source version
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'crates/**'
+      - 'bindings/**'
+      - '.pfx/**'
+      - '.github/workflows/version.yml'
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'crates/**'
+      - 'bindings/**'
+      - '.pfx/**'
+      - '.github/workflows/version.yml'
+permissions:
+  contents: read
+jobs:
+  version-metadata:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node .pfx/release.mjs --sync
+      - run: node .pfx/release.mjs --check
+      - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: node .pfx/release.mjs --publish

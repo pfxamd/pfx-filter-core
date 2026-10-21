@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "core",
+  "product": "PFx Filter Core",
+  "channel": "Development",
+  "baseVersion": "0.0.0-dev.0",
+  "baseline": "2ca3c924f715896c7dfcd43651f80d0d1214bfed",
+  "sourcePaths": [
+    "src",
+    "crates",
+    "bindings"
+  ],
+  "jsonVersions": [],
+  "cargoVersions": [],
+  "cargoLocks": [],
+  "cargoNames": [],
+  "npmLocks": [],
+  "changelogPath": false,
+  "ignoreSubjects": [
+    "chore(release): sync core version metadata [skip ci]"
+  ]
+}
